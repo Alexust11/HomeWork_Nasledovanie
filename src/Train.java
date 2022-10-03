@@ -9,7 +9,10 @@ public class Train extends Transport {
     public Train(String brand, String model, int yearRelease, String country, String bodyColor, int maxSpeed, float pricetrip, float travelTime, String stationNameDeparture, String stationFinal, int numberWagons) {
         super(brand, model, yearRelease, country, bodyColor, maxSpeed);
         this.pricetrip = pricetrip;
-        this.travelTime = travelTime;
+
+        if (travelTime > 0) {
+            this.travelTime = travelTime;
+        }
         this.stationNameDeparture = stationNameDeparture;
         this.stationFinal = stationFinal;
         NumberWagons = numberWagons;
@@ -49,12 +52,16 @@ public class Train extends Transport {
 
     @Override
     public String toString() {
-        return "Train{" +
-                "pricetrip=" + pricetrip +
-                ", travelTime=" + travelTime +
-                ", stationNameDeparture='" + stationNameDeparture + '\'' +
-                ", stationFinal='" + stationFinal + '\'' +
-                ", NumberWagons=" + NumberWagons +
+        return "Поезд {" +
+                " название ='" + getBrand() + '\'' +
+                ", модель='" + getModel() + '\'' +
+                ", выпущен страной ='" + getCountry() + '\'' +
+                ", максимальная скорость ='" + getMaxSpeed() + '\'' +
+                ", стоимость поездки=" + pricetrip +
+                ", время в пути=" + travelTime +
+                ", станция отправления='" + stationNameDeparture + '\'' +
+                ", станция прибытия='" + stationFinal + '\'' +
+                ", количество вагонов=" + NumberWagons +
                 '}';
     }
 }
