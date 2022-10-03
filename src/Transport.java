@@ -1,4 +1,4 @@
-public class Transport {
+public abstract class Transport {
     private String brand;
     private String model;
     private int yearRelease;//год выпуска
@@ -66,15 +66,6 @@ public class Transport {
 
     }
 
-    @Override
-    public String toString() {
-        return "Transport{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", yearRelease=" + yearRelease +
-                ", country='" + country + '\'' +
-                ", bodyColor='" + bodyColor + '\'' +
-                ", maxSpeed=" + maxSpeed +
-                '}';
-    }
+    abstract void refill();
+
 }

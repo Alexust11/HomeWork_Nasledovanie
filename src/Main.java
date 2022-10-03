@@ -22,7 +22,10 @@ public class Main {
         System.out.println(bus1);
         System.out.println(bus2);
         System.out.println(bus3);
-
+        System.out.println("____________________Задание 4____________________");
+        bus1.refill();
+        bmw.refill();
+        train1.refill();
 
     }
 }

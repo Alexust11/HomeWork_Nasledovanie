@@ -50,6 +50,10 @@ public class Train extends Transport {
         this.stationFinal = stationFinal;
     }
 
+    public void refill() {
+        System.out.println("Поезд заправляется дизельным топливом");
+    }
+
     @Override
     public String toString() {
         return "Поезд {" +

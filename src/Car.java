@@ -53,6 +53,9 @@ public class Car extends Transport{
         this.tireSeason = tireSeason;
     }
 
+    public void refill() {
+        System.out.println("Автомобиль завправляется бензином АИ-95");
+    }
     @Override
     public String toString() {
         return "Car{" +
